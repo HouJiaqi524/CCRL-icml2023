@@ -13,7 +13,7 @@ from utils_ import load_image, load_label
 def create_datasets(batch_size, shaffle, string):
 
     if string == 'XRMB':
-        # laod XRMB datasets（two views）
+        # laod XRMB datasets(two views):https://home.ttic.edu/~klivescu/XRMB_data/full/README
         mat1 = scipy.io.loadmat(r'CCRL/XRMBf2KALDI_window7_single1.mat')
         print('mat1.keys:', mat1.keys())
         mat2 = scipy.io.loadmat(r'CCRL/XRMBf2KALDI_window7_single2.mat')
@@ -36,9 +36,9 @@ def create_datasets(batch_size, shaffle, string):
 
     elif string == 'MNIST':
 
-        # load MINIST datasets from Lecun1998
+        # load MINIST datasets from Lecun1998 : http://yann.lecun.com/exdb/mnist/
         train_x_ = load_image(r'CCRL/train-images-idx3-ubyte.gz').astype(
-            float)  # <class 'numpy.ndarray'> (60000, 28, 28) float64(原来都是Uint8)
+            float)  # <class 'numpy.ndarray'> (60000, 28, 28) float64(former Uint8)
         train_y_ = load_label(r'CCRL/train-labels-idx1-ubyte.gz').astype(
             int).squeeze()  # <class 'numpy.ndarray'> (60000, ) int64
         test_x = load_image(r'CCRL/t10k-images-idx3-ubyte.gz').astype(

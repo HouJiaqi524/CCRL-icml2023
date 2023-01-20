@@ -135,6 +135,7 @@ for batch_x1, batch_x2, batch_y in tqdm(test_loader):
         gc.collect()
         torch.cuda.empty_cache()
 
+################TODO:specific ##################
 # load features
 train_u = np.loadtxt('GPU_A1B1C1D1_XRMB_2022_08_21_train_u.csv')     #(50000, 50)
 train_v = np.loadtxt('GPU_A1B1C1D1_XRMB_2022_08_21_train_v.csv')     #(50000, 50)
@@ -150,7 +151,7 @@ test_v = np.loadtxt('GPU_A1B1C1D1_XRMB_2022_08_21_test_v.csv')       #(10000, 50
 # test_eta = np.loadtxt(os.path.join(name, 'test_eta.csv'))
 train_y = np.loadtxt(os.path.join(name, 'train_y.csv'))
 test_y = np.loadtxt(os.path.join(name, 'test_y.csv'))
-
+################TODO:specific ##################
 
 ## calculate total sum correlation
 total_sum = 0
@@ -163,7 +164,7 @@ print(f'pearson:{total_sum}')
 print(f'spearman:{total_sum1}')
 
 
-# SVM 后继分类
+# SVM classification
 
 scaler = preprocessing.StandardScaler().fit(train_u)
 train_u = scaler.transform(train_u)

@@ -7,7 +7,7 @@ Copula based common representation learning (CCRL).
 Code of the architecture of CCRL as well as some experiments, implemented by python 3.7 and pytorch 1.8(or 1.10) .
 * CCRL.py: architecture of CCRL for MNIST transfer learning and XRMB data fution classification.
 * MonotonicNN.py, NeuralIntegral.py, ParallelNeuralIntegral.py are from https://github.com/AWehenkel/UMNN/tree/master/models/UMNN, with little modification, to bulid MonotonicNNs in CCRL. 
-* Dataloader.py: load MNIST and two-view XRMB datasets.
+* Dataloader.py: load MNIST and two-view XRMB datasets, first to down load the datasets provided in the links in the file, and place them in the same directory as Dataloader.py .
 * train_model.py: model training for MNIST and XRMB
 * objective.py: CCRL's loss function
 * main4test.py: train CCRL representations of two views.
