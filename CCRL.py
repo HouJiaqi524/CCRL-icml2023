@@ -1,7 +1,6 @@
 # coding=utf-8
 # @FileName  :CCRL.py
 # @Time      :2022/8/2 12:41
-# @Author    :JiaqiHou
 
 import numpy as np
 import torch
@@ -10,7 +9,6 @@ from MonotonicNN import MonotonicNN
 
 
 class Generator(nn.Module):
-    # how to determine the number of hidden cells https://zhuanlan.zhihu.com/p/100419971
     def __init__(self, input_dim: int = 273, output_dim: int = 112, dataset: str = 'XRMB'):
         super(Generator, self).__init__()
         self.dataset = dataset
